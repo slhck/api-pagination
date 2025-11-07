@@ -70,7 +70,10 @@ module ApiPagination
         count = collection.is_a?(Array) ? collection.count : collection.count(:all)
       end
 
-      Pagy.new(count: count, limit: options[:per_page], page: options[:page])
+      # Pagy 9.x requires keyword arguments
+      # Use explicit keyword argument syntax to avoid Ruby version quirks
+      pagy_options = {count: count, limit: options[:per_page], page: options[:page]}
+      Pagy.new(**pagy_options)
     end
 
     def pagy_pages_from(pagy)

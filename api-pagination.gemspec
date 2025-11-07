@@ -19,13 +19,13 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '> 2.7'
 
   s.add_development_dependency 'kaminari', '~> 1.2', '>= 1.2.1'
-  s.add_development_dependency 'pagy', '~> 9.0'
+  s.add_development_dependency 'pagy', '>= 9.4.0', '< 10.0.0'
   s.add_development_dependency 'will_paginate', '~> 3.3', '>= 3.3.1'
 
   s.add_development_dependency 'rspec', '~> 3.10'
   s.add_development_dependency 'grape', '~> 1.6'
-  s.add_development_dependency 'railties', '~> 6.1', '>= 6.1.4.1'
-  s.add_development_dependency 'actionpack', '~> 6.1', '>= 6.1.4.1'
+  s.add_development_dependency 'railties', '~> 7.0'
+  s.add_development_dependency 'actionpack', '~> 7.0'
   s.add_development_dependency 'sequel', '~> 5.49'
-  s.add_development_dependency 'activerecord-nulldb-adapter', '~> 0.7.0'
+  s.add_development_dependency 'activerecord-nulldb-adapter', '~> 0.9.0'
 end
